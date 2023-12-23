@@ -357,7 +357,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="form-group col-md-12">
                     <label for="summernote">Agenda</label>
                     <textarea name="agenda" id="summernote">Place <em>some</em> <u>text</u> <strong>here</strong></textarea>

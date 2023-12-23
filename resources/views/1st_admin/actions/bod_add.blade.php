@@ -346,7 +346,7 @@
                             <input type="text" id="position" name="position" class="form-control">
                         </div>
                     </div>
-                    
+
                     <div class="form-group col-md-6">
                         <label for="period">Period</label>
                         <div class="input-group">

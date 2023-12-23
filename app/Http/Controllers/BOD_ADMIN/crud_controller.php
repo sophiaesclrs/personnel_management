@@ -272,6 +272,18 @@ class crud_controller extends Controller
         // Find the BOD instance by ID
         $BOD = BOD::find($id);
 
+            // Handle file upload if a new photo is provided
+        if ($request->hasFile('photo')) {
+            // Delete the old photo if it exists
+            if ( $BOD ->photo) {
+                Storage::disk('public')->delete( $BOD ->photo);
+            }
+
+            // Upload the new photo
+            $photoPath = $request->file('photo')->store('photos', 'public');
+            $BOD ->photo = $photoPath;
+        }
+
         // Update fields
         $BOD->update([
         $BOD->name = $request->input('name'),
@@ -280,20 +292,11 @@ class crud_controller extends Controller
         $BOD->status = $request->input('status'),
         ]);
 
-        // Handle file upload only if a new photo is provided
-        if ($request->hasFile('photo')) {
-            // Delete the old photo if it exists
-            Storage::disk('public')->delete($BOD->photo);
-
-            // Upload the new photo
-            $photoPath = $request->file('photo')->store('photos', 'public');
-            $BOD->photo = $photoPath;
-        }
-
-
         // Redirect back or to a success page
         return redirect()->route('1st_admin.bod_dashboard')->with('success', 'BOD updated successfully');
     }
+
+
 
     public function bod_delete($id)
     {

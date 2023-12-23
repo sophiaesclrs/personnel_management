@@ -339,31 +339,24 @@
                                    @enderror
                                 </div>
                             </div>
+
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="inputName">Position</label>
-                                    <input type="text" name="position" class="form-control" value="{{ old('position', $BOD->position) }}">
-                                    @error('position')
-                                    <p class="alert alert-danger">{{ $message }}</p>
-                                     @enderror
-                                    </div>
-                                <!-- /.form-group -->
+                                    <label for="inputPosition">Position</label>
+                                    <input type="text" id="position" name="position" class="form-control" value="{{ old('position', $BOD->position) }}">
+                                </div>
                             </div>
 
                             <div class="form-group col-md-6">
-                                <label>Period</label>
+                                <label for="period">Period</label>
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text">
                                             <i class="far fa-calendar-alt"></i>
                                         </span>
-                                        @error('period')
-                                       <p class="alert alert-danger">{{ $message }}</p>
-                                      @enderror
                                     </div>
-                                    <input type="text" class="form-control float-right" name="period" value="{{ old('period', $BOD->period) }}">
+                                    <input type="text" class="form-control float-right" id="period" name="period" value="{{ old('period', $BOD->period) }}">
                                 </div>
-                                <!-- /.input group -->
                             </div>
 
                             <div class="col-md-6">

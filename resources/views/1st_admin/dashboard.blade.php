@@ -99,8 +99,8 @@
       text-transform: uppercase;
     }
     tbody, td{
-      text-align: center;
-      font-size: 14px;
+        text-align: justify;
+        font-size:12px;
     }
 
     .badge{
@@ -399,12 +399,12 @@
                                 <td>{{ $resolution->res_number }}</td>
 
                                 <td>
-                                    <p style="width: 350px; text-align: justify; font-size:12px;">{!! $resolution->agenda !!}</p>
+                                    <p style="width: 350px;">{!! $resolution->agenda !!}</p>
                                     <button style="width: 130px; font-size: 12px;" type="button" class="btn btn-block bg-gradient-secondary btn-sm">
                                         Tags: <span>{{ $resolution->tags }}</span>
                                     </button>
                                 </td>
-
+                                
                                 <td>{{ $resolution->created_at }}</td>
 
                                 <td><span class="badge">{{ $resolution->status }}</span></td>

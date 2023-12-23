@@ -399,7 +399,7 @@
                                 <td>{{ $resolution->res_number }}</td>
 
                                 <td>
-                                    <p style="width: 350px; text-align: justify; font-size:12px;">{{ $resolution->agenda }}</p>
+                                    <p style="width: 350px; text-align: justify; font-size:12px;">{!! $resolution->agenda !!}</p>
                                     <button style="width: 130px; font-size: 12px;" type="button" class="btn btn-block bg-gradient-secondary btn-sm">
                                         Tags: <span>{{ $resolution->tags }}</span>
                                     </button>

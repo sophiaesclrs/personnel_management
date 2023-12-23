@@ -349,6 +349,7 @@
                                     </div>
                                 <!-- /.form-group -->
                             </div>
+
                             <div class="form-group col-md-6">
                                 <label>Period</label>
                                 <div class="input-group">
@@ -364,12 +365,13 @@
                                 </div>
                                 <!-- /.input group -->
                             </div>
+
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="photo">Photo</label>
                                     <div class="input-group">
                                         <div class="custom-file">
-                                            <input type="file" class="custom-file-input" name="photo" value="{{ old('photo', $BOD->photo) }}">
+                                            <input type="file" class="custom-file-input" name="photo"  onchange="updateFileName(this)">
                                             <label class="custom-file-label" for="photo">Choose file</label>
                                             @error('photo')
                                             <p class="alert alert-danger">{{ $message }}</p>
@@ -604,6 +606,13 @@
     myDropzone.removeAllFiles(true)
   }
 
+
+  // JavaScript function to update the file name in the label
+  function updateFileName(input) {
+        var fileName = input.files[0].name;
+        var label = input.nextElementSibling;
+        label.innerHTML = fileName;
+    }
 
   // DropzoneJS Demo Code End
 </script>

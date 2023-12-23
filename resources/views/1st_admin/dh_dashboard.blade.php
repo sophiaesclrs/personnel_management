@@ -23,6 +23,7 @@
   <link rel="stylesheet" href="{{asset('assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css')}}">
   <link rel="stylesheet" href="{{asset('assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css')}}">
   <link rel="stylesheet" href="{{asset('assets/plugins/datatables-buttons/css/buttons.bootstrap4.min.css')}}">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
 
 
   <style>
@@ -120,6 +121,7 @@
     .module{
         display: flex;
         flex-direction: column;
+        margin: 0 auto;
     }
 
   </style>
@@ -346,7 +348,7 @@
                                     <td>{{ $departmentHead->rights }}</td>
                                     <td class="module">
                                         @foreach(explode(',', $departmentHead->module) as $module)
-                                            <span class="badge">{{ trim($module, '[""]') }}</span>&nbsp;
+                                            <span class="badge">{{ trim($module,'[""]') }}</span>&nbsp;
                                         @endforeach
                                     </td>
 
@@ -432,6 +434,9 @@
 <script src="{{asset('assets/plugins/datatables-buttons/js/buttons.html5.min.js')}}"></script>
 <script src="{{asset('assets/plugins/datatables-buttons/js/buttons.print.min.js')}}"></script>
 <script src="{{asset('assets/plugins/datatables-buttons/js/buttons.colVis.min.js')}}"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+
 <!-- ChartJS -->
 <script src="{{asset('assets/plugins/chart.js/Chart.min.js')}}"></script>
 

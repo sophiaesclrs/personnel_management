@@ -383,7 +383,6 @@
                                 <option value="Membership Module" {{ in_array('Membership Module', $selectedModules) ? 'selected' : '' }}>Membership Module</option>
                                 <option value="BOD Resolution and Issuances Repository System" {{ in_array('BOD Resolution and Issuances Repository System', $selectedModules) ? 'selected' : '' }}>BOD Resolution and Issuances Repository System</option>
                                 <option value="Coop Manuals Repository System" {{ in_array('Coop Manuals Repository System', $selectedModules) ? 'selected' : '' }}>Coop Manuals Repository System</option>
-                                <option value="Appointment System" {{ in_array('Appointment System', $selectedModules) ? 'selected' : '' }}>Appointment System</option>
                             </select>
                         </div>
                     </div>

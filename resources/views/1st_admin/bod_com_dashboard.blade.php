@@ -346,7 +346,9 @@
                                 <td><span>{{ $committee->period }}</span></td>
 
                                 <td>
-                                    <img src="{{ asset('storage/' . $committee->photo) }}"  style="width: 48px;" class="img-circle">
+                                <img src="{{ asset('storage/' . $committee->photo) }}" style="width: 48px;" class="img-circle">
+
+
                                 </td>
 
                                 <td><span class="badge">{{ $committee->status }}</span></td>

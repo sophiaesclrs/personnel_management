@@ -369,7 +369,6 @@
                                     <option>Membership Module</option>
                                     <option>BOD Resolution and Issuances Repository System</option>
                                     <option>Coop Manuals Repository System</option>
-                                    <option>Appointment System</option>
                                 </select>
                             </div>
                         </div>

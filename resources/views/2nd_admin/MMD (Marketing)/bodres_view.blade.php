@@ -124,7 +124,7 @@
       font-size: 12px;
     }
     .badge-amen{ background: #9C0D0F; }
-    .badge-blue{ background: #031273; } 
+    .badge-blue{ background: #031273; }
 
     th,
     td{ font-size: 12px; }
@@ -311,7 +311,7 @@
                             </a>
                             <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="{{url('users/update-profile" class="nav-link">
+                                <a href="" class="nav-link">
                                 <i class="fas fa-user-gear nav-icon"></i>
                                 <p>Update Profile</p>
                                 </a>
@@ -354,7 +354,7 @@
         <!-- Main content -->
         <section class="content">
           <div class="container-fluid">
-              
+
           <div class="row">
                   <div class="col-12">
                     <div class="card">

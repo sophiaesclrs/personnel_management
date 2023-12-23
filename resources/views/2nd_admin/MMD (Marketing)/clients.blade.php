@@ -308,7 +308,7 @@
                             </a>
                             <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="{{url('users/update-profile" class="nav-link">
+                                <a href="" class="nav-link">
                                 <i class="fas fa-user-gear nav-icon"></i>
                                 <p>Update Profile</p>
                                 </a>

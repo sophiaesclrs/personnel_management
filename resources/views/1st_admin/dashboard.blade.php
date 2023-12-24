@@ -381,7 +381,7 @@
                       </div>
                       <!-- /.card-header -->
                       <div class="card-body">
-                      <table id="example1" class="table table-hover">
+                      <table id="example1" class="table table-bordered table-hover">
                       <thead>
                           <tr>
                               <th>Res. No.</th>
@@ -404,7 +404,7 @@
                                         Tags: <span>{{ $resolution->tags }}</span>
                                     </button>
                                 </td>
-                                
+
                                 <td>{{ $resolution->created_at }}</td>
 
                                 <td><span class="badge">{{ $resolution->status }}</span></td>

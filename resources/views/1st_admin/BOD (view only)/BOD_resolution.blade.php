@@ -99,8 +99,9 @@
       text-transform: uppercase;
     }
     tbody, td{
-      text-align: center;
-      font-size: 14px;
+        text-align: justify;
+        font-size:12px;
+        text-align: center;
     }
 
     .badge{
@@ -110,6 +111,11 @@
       font-size: 12px;
     }
     .badge-amen{ background: #9C0D0F; }
+
+    .alert{
+        padding: 0 auto;
+        float: right;
+    }
 
   </style>
 
@@ -349,26 +355,28 @@
                             </thead>
 
                             <tbody>
-                              @foreach ($resolutions as $resolution)
+                        @foreach($resolutions as $resolution)
                             <tr>
                                 <td>{{ $resolution->res_number }}</td>
-                                <td>
-                                    <p style="width: 400px; text-align: justify;">
-                                    {!! $resolution->agenda !!}
-                                    </p>
+
+                                <td style="text-align:justify;">
+                                    <p style="width: 350px;">{!! $resolution->agenda !!}</p>
                                     <button style="width: 130px; font-size: 12px;" type="button" class="btn btn-block bg-gradient-secondary btn-sm">
-                                        Tags: Something here <span>{{ $resolution->tags }}</span>
+                                        Tags: <span>{{ $resolution->tags }}</span>
                                     </button>
                                 </td>
-                                <td>{{ $resolution->res_date }}</td>
+
+                                <td>{{ $resolution->created_at }}</td>
 
                                 <td><span class="badge">{{ $resolution->status }}</span></td>
+
                                 <td>
                                     <p style="font-size: 14px; font-weight: bold;">{{ $resolution->encoded_by }}</p>
-                                    <p class="time">{{ $resolution->encoded_date }}</p>
+                                    <p class="time">{{ $resolution->created_at }}</p>
                                 </td>
                             </tr>
-                        @endforeach
+                            @endforeach
+                      </tbody>
                     </table>
 
                         </div>
